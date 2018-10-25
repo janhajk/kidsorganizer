@@ -17,18 +17,19 @@ var login = function(cb) {
          successUrl: config.portal.successUrl,
          loginDurationInHours: 0,
          newLogin: true
-      }
+      },
+      
    }, function(e, response, body) {
       if(e) {
          console.log('error in request ' + url);
          console.log(e);
          cb(e);
       } else {
-         console.log(body);
+         var data = JSON.parse(body);
+         console.log(data);
          console.log('--------------------------');
          console.log(request);
          console.log('--------------------------');
-         console.log(request.cookie);
          //var redirectUrl = data.redirectUrl;
          //var loginToken = data.loginToken;
          //var portalId = data.portalId;
