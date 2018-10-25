@@ -15,7 +15,7 @@ var login = function(cb) {
          password: config.user.password,
          loginToken: '',
          successUrl: config.portal.successUrl,
-         loginDurationInHours: 0,
+         loginDurationInHours: 1,
          newLogin: true
       },
       json: true
@@ -28,17 +28,15 @@ var login = function(cb) {
          //var data = JSON.parse(body);
          console.log(body);
          console.log('--------------------------');
-         console.log(request);
-         console.log('--------------------------');
          //var redirectUrl = data.redirectUrl;
          //var loginToken = data.loginToken;
          //var portalId = data.portalId;
-         cb(null, response, body);
+         cb(null, body);
       }
    });
 };
 
 
-login(function(){
+login(function(err,body){
    
 });
