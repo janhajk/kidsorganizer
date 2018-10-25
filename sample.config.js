@@ -6,5 +6,5 @@ exports.user = {
 exports.portal = {
    id: '',
    loginUrl: '',
-   successUrl: ''
+      successUrl: ''
 };
