@@ -6,7 +6,7 @@ var request = require('request');
 
 
 var login = function(cb) {
-   request({
+   var options = {
       url: config.portal.loginUrl,
       method: 'POST',
       form: {
@@ -19,7 +19,9 @@ var login = function(cb) {
          newLogin: true
       },
       json: true
-   }, function(e, response, body) {
+   }
+   console.log(options);
+   request(options, function(e, response, body) {
       if(e) {
          console.log('error in request ' + url);
          console.log(e);
@@ -35,8 +37,4 @@ var login = function(cb) {
       }
    });
 };
-
-
-login(function(err,body){
-   
-});
+login(function(err, body) {});
