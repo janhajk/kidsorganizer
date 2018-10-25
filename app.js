@@ -6,9 +6,8 @@ var request = require('request');
 
 
 var login = function(cb) {
-   var url = 'https://www.schule-lausen.ch/login.php';
    request({
-      url: url,
+      url: config.portal.loginUrl,
       method: 'POST',
       form: {
          username: config.user.name,
@@ -28,6 +27,8 @@ var login = function(cb) {
          console.log(body);
          console.log('--------------------------');
          console.log(request);
+         console.log('--------------------------');
+         console.log(request.cookie);
          //var redirectUrl = data.redirectUrl;
          //var loginToken = data.loginToken;
          //var portalId = data.portalId;
