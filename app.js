@@ -9,7 +9,7 @@ var login = function(cb) {
    var options = {
       url: config.portal.loginUrl,
       method: 'POST',
-      form: {
+      body: JSON.stringify({
          username: config.user.name,
          portalId: config.portal.id,
          password: config.user.password,
@@ -17,7 +17,7 @@ var login = function(cb) {
          successUrl: config.portal.successUrl,
          loginDurationInHours: 1,
          newLogin: true
-      },
+      }),
       json: true
    }
    console.log(options);
@@ -30,6 +30,7 @@ var login = function(cb) {
          //var data = JSON.parse(body);
          console.log(body);
          console.log('--------------------------');
+         console.log(response);
          //var redirectUrl = data.redirectUrl;
          //var loginToken = data.loginToken;
          //var portalId = data.portalId;
