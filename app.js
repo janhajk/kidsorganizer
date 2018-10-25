@@ -7,9 +7,17 @@ var request = require('request');
 
 var login = function(cb) {
    var url = 'https://www.schule-lausen.ch/login.php';
-   request.post({
+   request({
       url: url,
-      formData: {
+      method: 'POST',
+      form: {
+         username: config.user.name,
+         portalId: config.portal.id,
+         password: config.user.password,
+         loginToken: '',
+         successUrl: config.portal.successUrl,
+         loginDurationInHours: 0,
+         newLogin: true
       }
    }, function(e, response, body) {
       if(e) {
