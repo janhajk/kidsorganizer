@@ -1,0 +1,13 @@
+{
+  "name": "Kids Organizer",
+  "version": "0.0.1",
+  "description": "Kids Organizer for schedule esp32, calendar, Escola connector etc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "janhajk@gmail.com",
+  "private": true,
+  "dependencies": {
+  }
+}
