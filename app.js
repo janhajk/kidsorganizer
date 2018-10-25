@@ -7,8 +7,18 @@ var request = require('request');
 
 var login = function(cb) {
    var url = 'https://www.schule-lausen.ch/login.php';
+   
+   
+   request.post({url:'http://service.com/upload', formData: {}}, function optionalCallback(err, httpResponse, body) {
+  if (err) {
+    return console.error('upload failed:', err);
+  }
+  console.log('Upload successful!  Server responded with:', body);
+});
+   
+   
    request.post({
-      url: config.portal.loginUrl,
+      url: url,
       formData: {
          username: config.user.name,
          portalId: config.portal.id,
