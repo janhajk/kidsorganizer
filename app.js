@@ -19,15 +19,7 @@ var login = function(cb) {
    
    request.post({
       url: url,
-      formData: {
-         username: config.user.name,
-         portalId: config.portal.id,
-         password: config.user.password,
-         loginToken: '',
-         successUrl: config.portal.successUrl,
-         loginDurationInHours: 0,
-         newLogin: true
-      }
+
    }, function(e, response, body) {
       if(e) {
          console.log('error in request ' + url);
