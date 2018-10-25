@@ -7,19 +7,10 @@ var request = require('request');
 
 var login = function(cb) {
    var url = 'https://www.schule-lausen.ch/login.php';
-   
-   
-   request.post({url:'http://service.com/upload', formData: {}}, function optionalCallback(err, httpResponse, body) {
-  if (err) {
-    return console.error('upload failed:', err);
-  }
-  console.log('Upload successful!  Server responded with:', body);
-});
-   
-   
    request.post({
       url: url,
-
+      formData: {
+      }
    }, function(e, response, body) {
       if(e) {
          console.log('error in request ' + url);
