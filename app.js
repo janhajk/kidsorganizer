@@ -18,15 +18,15 @@ var login = function(cb) {
          loginDurationInHours: 0,
          newLogin: true
       },
-      
+      json: true
    }, function(e, response, body) {
       if(e) {
          console.log('error in request ' + url);
          console.log(e);
          cb(e);
       } else {
-         var data = JSON.parse(body);
-         console.log(data);
+         //var data = JSON.parse(body);
+         console.log(body);
          console.log('--------------------------');
          console.log(request);
          console.log('--------------------------');
